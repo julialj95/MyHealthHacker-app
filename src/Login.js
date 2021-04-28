@@ -40,7 +40,7 @@ function Login(props) {
   };
 
   return (
-    <div className="login">
+    <main className="login">
       <h1>LOG IN</h1>
       <h2 className="demo_access">
         *To test out MyHealthHacker with a demo account, log in with the
@@ -77,7 +77,7 @@ function Login(props) {
           <h2>Incorrect username or password. Please try again.</h2>
         ) : null}
       </form>
-    </div>
+    </main>
   );
 }
 export default Login;

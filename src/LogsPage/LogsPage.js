@@ -55,12 +55,12 @@ function Logs(props) {
     );
   });
   return (
-    <div className="about">
+    <main className="about">
       <h1>{context.username}'s Logs</h1>
       {props.logs.length === 0 ? <h2>No saved logs</h2> : null}
       {isFetching ? <h2>Loading...</h2> : displayLogs}
       {error ? <h2>{error.error}</h2> : null}
-    </div>
+    </main>
   );
 }
 

@@ -41,7 +41,7 @@ function Signup() {
   };
 
   return (
-    <div className="signup">
+    <main className="signup">
       {" "}
       <h1>SIGN UP</h1>
       <h2 className="signup_instructions">
@@ -72,7 +72,7 @@ function Signup() {
         </button>
       </form>
       {error ? <h2>{error.error}</h2> : null}
-    </div>
+    </main>
   );
 }
 
