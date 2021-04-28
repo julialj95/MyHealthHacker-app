@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<main
+  className="login"
+>
+  <h1>
+    LOG IN
+  </h1>
+  <h2
+    className="demo_access"
+  >
+    *To test out MyHealthHacker with a demo account, log in with the following credentials:
+    <br />
+    Username: demouser
+    <br />
+    Password: demopassword
+  </h2>
+  <form
+    className="login_form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="login_field"
+      name="username"
+      onChange={[Function]}
+      placeholder="Enter username"
+      type="text"
+    />
+    <br />
+    <input
+      className="login_field"
+      name="password"
+      onChange={[Function]}
+      placeholder="Enter password"
+      type="text"
+    />
+    <br />
+    <button
+      className="login_btn"
+      type="submit"
+    >
+      Log In
+    </button>
+  </form>
+</main>
+`;

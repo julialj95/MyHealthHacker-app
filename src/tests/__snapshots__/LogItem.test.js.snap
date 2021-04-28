@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div>
+  <section
+    className="log_record short"
+  >
+    <h2>
+      2021-04-27
+    </h2>
+    <button
+      onClick={[Function]}
+    >
+      View Log
+    </button>
+  </section>
+</div>
+`;

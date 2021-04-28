@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<footer
+  className="footer"
+>
+  <p>
+    MyHealthHacker
+  </p>
+  <p>
+    © 2020
+  </p>
+</footer>
+`;
