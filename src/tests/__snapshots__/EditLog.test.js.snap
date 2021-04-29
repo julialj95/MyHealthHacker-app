@@ -12,7 +12,7 @@ exports[`renders the UI as expected 1`] = `
     </label>
     <input
       id="log_date"
-      max="2021-04-27"
+      max="2021-04-28"
       name="log_date"
       onChange={[Function]}
       type="date"
