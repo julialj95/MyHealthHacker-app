@@ -1,0 +1,38 @@
+.login {
+  text-align: center;
+  margin: 10%;
+  border: solid 3px #88d317;
+  border-radius: 15px;
+  background-color: #6e3667;
+}
+
+.login_form {
+  padding-bottom: 15px;
+}
+
+.demo_access {
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.login_header {
+  color: white;
+}
+
+@media all and (min-width: 600px) {
+  .login_header {
+    font-size: 26px;
+  }
+  .demo_access {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 960px) {
+  .login_header {
+    font-size: 32px;
+  }
+  .demo_access {
+    font-size: 28px;
+  }
+}

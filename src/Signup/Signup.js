@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import config from "./config";
-import TokenService from "./services/token-service";
+import config from "../config";
+import TokenService from "../services/token-service";
+import "./Signup.css";
 
 function Signup() {
   const [userData, setUserData] = useState({ username: "", password: "" });
@@ -43,10 +44,10 @@ function Signup() {
   return (
     <main className="signup">
       {" "}
-      <h1>SIGN UP</h1>
-      <h2 className="signup_instructions">
+      <h2 className="signup_header">SIGN UP</h2>
+      <h3 className="signup_instructions">
         Create an account to start tracking your health habits!
-      </h2>
+      </h3>
       <form className="signup_form" onSubmit={(e) => handleSignup(e)}>
         <input
           className="signup_field"
@@ -65,9 +66,9 @@ function Signup() {
           placeholder="Create a password..."
           onChange={(e) => handleChange(e)}
         />
-
         <br />
-        <button className="signup_btn" type="submit">
+        <br />
+        <button className="form_btn" type="submit">
           Create Account
         </button>
       </form>

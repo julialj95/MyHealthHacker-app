@@ -1,0 +1,38 @@
+.signup {
+  text-align: center;
+  margin: 10%;
+  border: solid 3px #88d317;
+  border-radius: 15px;
+  background-color: #6e3667;
+}
+
+.signup_form {
+  padding-bottom: 15px;
+}
+
+.signup_instructions {
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.signup_header {
+  color: white;
+}
+
+@media all and (min-width: 600px) {
+  .signup_header {
+    font-size: 26px;
+  }
+  .signup_instructions {
+    font-size: 23px;
+  }
+}
+@media all and (min-width: 960px) {
+  .signup_header {
+    font-size: 32px;
+  }
+  .signup_instructions {
+    font-size: 28px;
+  }
+}

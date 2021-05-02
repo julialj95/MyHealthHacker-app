@@ -117,7 +117,7 @@ function EditLog(props) {
         if (!res.ok) {
           res.json().then((e) => Promise.reject(e));
         }
-        // res.json();
+
         history.push("/logs");
         setDisplayEditLogForm(false);
       })

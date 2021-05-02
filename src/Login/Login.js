@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import TokenService from "./services/token-service";
-import AuthService from "./services/auth-service";
-import userContext from "./UserContext";
-
+import TokenService from "../services/token-service";
+import AuthService from "../services/auth-service";
+import userContext from "../UserContext";
+import "./Login.css";
 function Login(props) {
   const context = useContext(userContext);
   const history = useHistory();
@@ -41,15 +41,17 @@ function Login(props) {
 
   return (
     <main className="login">
-      <h1>LOG IN</h1>
-      <h2 className="demo_access">
+      <h2 className="login_header">LOG IN</h2>
+      <h3 className="demo_access">
         *To test out MyHealthHacker with a demo account, log in with the
         following credentials:
+        <br />
         <br />
         Username: demouser
         <br />
         Password: demopassword
-      </h2>
+        <br />
+      </h3>
       <form className="login_form" onSubmit={(e) => handleJwtAuthSubmit(e)}>
         <input
           className="login_field"
@@ -70,7 +72,7 @@ function Login(props) {
         />
 
         <br />
-        <button className="login_btn" type="submit">
+        <button className="form_btn" type="submit">
           Log In
         </button>
         {error ? (
