@@ -118,7 +118,7 @@ function Logs(props) {
 
   return (
     <main className="new_log">
-      <h2>Submit Log:</h2>
+      <h2 className="log_form_header">Submit Log</h2>
       <LogInputForm
         handleChange={handleChange}
         handleSubmitLog={submitLog}

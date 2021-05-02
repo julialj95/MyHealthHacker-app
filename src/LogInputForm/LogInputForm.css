@@ -9,7 +9,7 @@
 }
 
 .date_section {
-  padding: 15px;
+  padding: 0 10px 0 10px;
 }
 .input_box,
 textarea {
@@ -48,6 +48,9 @@ textarea {
   .section_header {
     font-size: 22px;
   }
+  .form_btn {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 960px) {
@@ -60,5 +63,8 @@ textarea {
   }
   .section_header {
     font-size: 24px;
+  }
+  .form_btn {
+    font-size: 18px;
   }
 }

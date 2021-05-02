@@ -1,3 +1,6 @@
+.log_form_header {
+  font-size: 22px;
+}
 .new_log {
   text-align: center;
   background-color: #6e3667;
@@ -13,10 +16,16 @@
 }
 
 @media all and (min-width: 600px) {
+  .log_form_header {
+    font-size: 24px;
+  }
 }
 
 @media all and (min-width: 768px) {
 }
 
 @media all and (min-width: 960px) {
+  .log_form_header {
+    font-size: 27px;
+  }
 }
