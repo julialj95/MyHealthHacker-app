@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<main
+  className="about"
+>
+  <h1>
+    
+    's Logs
+  </h1>
+  <h2>
+    No saved logs
+  </h2>
+  <h2>
+    Loading...
+  </h2>
+</main>
+`;

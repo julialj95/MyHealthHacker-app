@@ -410,4 +410,8 @@ function LogInputForm(props) {
   );
 }
 
+LogInputForm.defaultProps = {
+  handleChange: () => {},
+};
+
 export default LogInputForm;

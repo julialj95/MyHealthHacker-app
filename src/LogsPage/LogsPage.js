@@ -64,4 +64,8 @@ function Logs(props) {
   );
 }
 
+Logs.defaultProps = {
+  logs: [],
+};
+
 export default Logs;

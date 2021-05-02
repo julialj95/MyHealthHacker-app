@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SubmitLog from "../SubmitLog/SubmitLog";
-import { BrowserRouter as Router } from "react-router-dom";
+import { MemoryRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
 
 it("renders without crashing", () => {

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the UI as expected 1`] = `
-<form
-  onSubmit={[Function]}
->
+<form>
   <section>
     <label
       htmlFor="date"
@@ -16,7 +14,6 @@ exports[`renders the UI as expected 1`] = `
       name="log_date"
       onChange={[Function]}
       type="date"
-      value=""
     />
   </section>
   <br />
@@ -197,7 +194,6 @@ exports[`renders the UI as expected 1`] = `
         name="sleep_hours"
         onChange={[Function]}
         type="number"
-        value=""
       />
       <div>
         <h3>
@@ -288,7 +284,6 @@ exports[`renders the UI as expected 1`] = `
         name="exercise_minutes"
         onChange={[Function]}
         type="number"
-        value=""
       />
       <br />
       <br />
@@ -303,7 +298,6 @@ exports[`renders the UI as expected 1`] = `
         name="exercise_type"
         onChange={[Function]}
         type="text"
-        value=""
       />
       <br />
       <br />
@@ -318,7 +312,6 @@ exports[`renders the UI as expected 1`] = `
         name="water"
         onChange={[Function]}
         type="number"
-        value=""
       />
     </section>
   </div>
@@ -343,7 +336,6 @@ exports[`renders the UI as expected 1`] = `
         onChange={[Function]}
         placeholder="Anything else you would like to track? Note it here!"
         rows="4"
-        value=""
       />
     </section>
   </div>
@@ -356,7 +348,6 @@ exports[`renders the UI as expected 1`] = `
       Submit
     </button>
     <button
-      onClick={[Function]}
       type="reset"
     >
       Reset

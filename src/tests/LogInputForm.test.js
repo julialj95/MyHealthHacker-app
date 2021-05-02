@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import EditLog from "../EditLog/EditLog";
+import LogInputForm from "../LogInputForm/LogInputForm";
 import { MemoryRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
 
@@ -9,7 +9,7 @@ it("renders without crashing", () => {
 
   ReactDOM.render(
     <Router>
-      <EditLog />
+      <LogInputForm />
     </Router>,
     div
   );
@@ -20,7 +20,7 @@ it("renders the UI as expected", () => {
   const tree = renderer
     .create(
       <Router>
-        <EditLog />
+        <LogInputForm />
       </Router>
     )
     .toJSON();

@@ -6,7 +6,7 @@ exports[`renders the UI as expected 1`] = `
     className="log_record short"
   >
     <h2>
-      2021-04-28
+      2021-04-30
     </h2>
     <button
       onClick={[Function]}
