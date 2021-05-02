@@ -21,7 +21,7 @@ function LogInputForm(props) {
   const maxDate = moment(today).format("YYYY-MM-DD");
   return (
     <form onSubmit={handleSubmitLog}>
-      <section>
+      <section className="date_section">
         <label className="box_label" htmlFor="date">
           Log Date{" "}
         </label>
@@ -39,7 +39,7 @@ function LogInputForm(props) {
       <div>
         <section className="mental">
           <h2 className="section_header">Psychological</h2>
-          <div className="box_label">
+          <div>
             <h3 className="box_label bold">Mood Rating</h3>
             <h3 className="box_label">
               1 = Bad Mood <br /> 5 = Great Mood
@@ -419,8 +419,10 @@ function LogInputForm(props) {
         </section>
       </div>
       <section className="button-section">
-        <button type="submit">Submit</button>
-        <button type="reset" onClick={handleReset}>
+        <button className="form_btn" type="submit">
+          Submit
+        </button>
+        <button className="form_btn" type="reset" onClick={handleReset}>
           Reset
         </button>
       </section>

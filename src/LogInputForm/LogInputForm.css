@@ -8,8 +8,10 @@
   padding-bottom: 10px;
 }
 
+.date_section {
+  padding: 15px;
+}
 .input_box,
-/* input[type="text"], */
 textarea {
   width: 60%;
 }
@@ -24,10 +26,39 @@ textarea {
 .bold {
   font-weight: bold;
 }
+
+.form_btn {
+  flex: 1;
+  margin: 5px 10px 5px 10px;
+  background-color: #3c3c3c;
+  box-shadow: 1px 1px white;
+  border: 2px solid #88d317;
+  border-radius: 3px;
+  color: white;
+  font-family: "Nunito";
+}
 @media all and (min-width: 600px) {
-  input[type="number"],
-  /* input[type="text"], */
+  .input_box,
   textarea {
     width: 40%;
+  }
+  .box_label {
+    font-size: 19px;
+  }
+  .section_header {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .input_box,
+  textarea {
+    width: 30%;
+  }
+  .box_label {
+    font-size: 21px;
+  }
+  .section_header {
+    font-size: 24px;
   }
 }
