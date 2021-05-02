@@ -28,7 +28,7 @@ This fullstack application was built using:
 
 ## Link to API Repo
 
-[API Link](https://github.com/julialj95/myhealthhacker-app)
+[API Link](https://github.com/julialj95/myhealthhacker-api)
 
 ## Screenshots
 
