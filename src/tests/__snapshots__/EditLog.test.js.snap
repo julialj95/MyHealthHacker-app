@@ -4,15 +4,19 @@ exports[`renders the UI as expected 1`] = `
 <form
   onSubmit={[Function]}
 >
-  <section>
+  <section
+    className="date_section"
+  >
     <label
+      className="box_label"
       htmlFor="date"
     >
-      Current Date
+      Log Date
+       
     </label>
     <input
       id="log_date"
-      max="2021-04-30"
+      max="2021-05-02"
       name="log_date"
       onChange={[Function]}
       type="date"
@@ -20,23 +24,27 @@ exports[`renders the UI as expected 1`] = `
     />
   </section>
   <br />
-  <div
-    className="log_section"
-  >
+  <div>
     <section
       className="mental"
     >
-      <h2>
+      <h2
+        className="section_header"
+      >
         Psychological
       </h2>
-      <div
-        className="mood_rating"
-      >
-        <h3>
+      <div>
+        <h3
+          className="box_label bold"
+        >
           Mood Rating
         </h3>
-        <h3>
-          Rate your mood out of 5
+        <h3
+          className="box_label"
+        >
+          1 = Bad Mood 
+          <br />
+           5 = Great Mood
         </h3>
         <input
           checked={false}
@@ -107,11 +115,17 @@ exports[`renders the UI as expected 1`] = `
       <div
         className="stress"
       >
-        <h2>
+        <h2
+          className="box_label bold"
+        >
           Stress Level
         </h2>
-        <h3>
-          Rate your stress level with 5 being the most stressed
+        <h3
+          className="box_label"
+        >
+          1 = Low Stress 
+          <br />
+          5 = High Stress
         </h3>
         <input
           checked={false}
@@ -183,16 +197,20 @@ exports[`renders the UI as expected 1`] = `
     <section
       className="sleep"
     >
-      <h2>
+      <h2
+        className="section_header"
+      >
         Sleep
       </h2>
       <label
+        className="box_label"
         htmlFor="sleep"
       >
         Hours slept
       </label>
       <br />
       <input
+        className="input_box"
         id="sleep_hours"
         name="sleep_hours"
         onChange={[Function]}
@@ -200,7 +218,9 @@ exports[`renders the UI as expected 1`] = `
         value=""
       />
       <div>
-        <h3>
+        <h3
+          className="box_label"
+        >
           Sleep quality
         </h3>
         <input
@@ -270,20 +290,23 @@ exports[`renders the UI as expected 1`] = `
         </label>
       </div>
     </section>
-    <br />
     <section
       className="exercise"
     >
-      <h2>
+      <h2
+        className="section_header"
+      >
         Physical
       </h2>
       <label
+        className="box_label"
         htmlFor="exercise_minutes"
       >
         Minutes of exercise
       </label>
       <br />
       <input
+        className="input_box"
         id="exercise_minutes"
         name="exercise_minutes"
         onChange={[Function]}
@@ -293,12 +316,14 @@ exports[`renders the UI as expected 1`] = `
       <br />
       <br />
       <label
+        className="box_label"
         htmlFor="exercise_type"
       >
         Type of exercise
       </label>
       <br />
       <input
+        className="input_box"
         id="exercise_type"
         name="exercise_type"
         onChange={[Function]}
@@ -308,12 +333,14 @@ exports[`renders the UI as expected 1`] = `
       <br />
       <br />
       <label
+        className="box_label"
         htmlFor="water"
       >
-        Ounces of water consumed
+        Water consumed (oz.)
       </label>
       <br />
       <input
+        className="input_box"
         id="water"
         name="water"
         onChange={[Function]}
@@ -322,22 +349,18 @@ exports[`renders the UI as expected 1`] = `
       />
     </section>
   </div>
-  <br />
-  <br />
-  <div
-    className="log_section"
-  >
+  <div>
     <section
       className="other"
     >
       <label
+        className="box_label"
         htmlFor="notes"
       >
         Additional notes
       </label>
       <br />
       <textarea
-        cols="50"
         id="notes"
         name="notes"
         onChange={[Function]}
@@ -351,11 +374,13 @@ exports[`renders the UI as expected 1`] = `
     className="button-section"
   >
     <button
+      className="form_btn"
       type="submit"
     >
       Submit
     </button>
     <button
+      className="form_btn"
       onClick={[Function]}
       type="reset"
     >

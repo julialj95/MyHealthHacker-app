@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import "./LogInputForm.css";
 
 function LogInputForm(props) {
   const {
@@ -20,8 +21,10 @@ function LogInputForm(props) {
   const maxDate = moment(today).format("YYYY-MM-DD");
   return (
     <form onSubmit={handleSubmitLog}>
-      <section>
-        <label htmlFor="date">Current Date</label>
+      <section className="date_section">
+        <label className="box_label" htmlFor="date">
+          Log Date{" "}
+        </label>
         <input
           type="date"
           id="log_date"
@@ -33,12 +36,14 @@ function LogInputForm(props) {
       </section>
       <br />
 
-      <div className="log_section">
+      <div>
         <section className="mental">
-          <h2>Psychological</h2>
-          <div className="mood_rating">
-            <h3>Mood Rating</h3>
-            <h3>Rate your mood out of 5</h3>
+          <h2 className="section_header">Psychological</h2>
+          <div>
+            <h3 className="box_label bold">Mood Rating</h3>
+            <h3 className="box_label">
+              1 = Bad Mood <br /> 5 = Great Mood
+            </h3>
             {props.parent === "submitLog" ? (
               <input
                 type="radio"
@@ -57,7 +62,6 @@ function LogInputForm(props) {
                 onChange={handleChange}
               />
             )}
-
             <label htmlFor="mood">1</label>
             {props.parent === "submitLog" ? (
               <input
@@ -137,8 +141,10 @@ function LogInputForm(props) {
             <label htmlFor="mood">5</label>
           </div>
           <div className="stress">
-            <h2>Stress Level</h2>
-            <h3>Rate your stress level with 5 being the most stressed</h3>
+            <h2 className="box_label bold">Stress Level</h2>
+            <h3 className="box_label">
+              1 = Low Stress <br />5 = High Stress
+            </h3>
             {props.parent === "submitLog" ? (
               <input
                 type="radio"
@@ -237,18 +243,21 @@ function LogInputForm(props) {
           </div>
         </section>
         <section className="sleep">
-          <h2>Sleep</h2>
-          <label htmlFor="sleep">Hours slept</label>
+          <h2 className="section_header">Sleep</h2>
+          <label className="box_label" htmlFor="sleep">
+            Hours slept
+          </label>
           <br />
           <input
             type="number"
+            className="input_box"
             name="sleep_hours"
             id="sleep_hours"
             value={sleep_hours}
             onChange={handleChange}
           />
           <div>
-            <h3>Sleep quality</h3>
+            <h3 className="box_label">Sleep quality</h3>
             {props.parent === "submitLog" ? (
               <input
                 type="radio"
@@ -346,13 +355,16 @@ function LogInputForm(props) {
             <label htmlFor="sleep_quality">5</label>
           </div>
         </section>
-        <br />
+
         <section className="exercise">
-          <h2>Physical</h2>
-          <label htmlFor="exercise_minutes">Minutes of exercise</label>
+          <h2 className="section_header">Physical</h2>
+          <label className="box_label" htmlFor="exercise_minutes">
+            Minutes of exercise
+          </label>
           <br />
           <input
             type="number"
+            className="input_box"
             name="exercise_minutes"
             id="exercise_minutes"
             value={exercise_minutes}
@@ -360,10 +372,13 @@ function LogInputForm(props) {
           />
           <br />
           <br />
-          <label htmlFor="exercise_type">Type of exercise</label>
+          <label className="box_label" htmlFor="exercise_type">
+            Type of exercise
+          </label>
           <br />
           <input
             type="text"
+            className="input_box"
             name="exercise_type"
             id="exercise_type"
             value={exercise_type}
@@ -372,10 +387,13 @@ function LogInputForm(props) {
           <br />
           <br />
 
-          <label htmlFor="water">Ounces of water consumed</label>
+          <label className="box_label" htmlFor="water">
+            Water consumed (oz.)
+          </label>
           <br />
           <input
             type="number"
+            className="input_box"
             name="water"
             id="water"
             value={water}
@@ -383,17 +401,17 @@ function LogInputForm(props) {
           />
         </section>
       </div>
-      <br />
-      <br />
-      <div className="log_section">
+
+      <div>
         <section className="other">
-          <label htmlFor="notes">Additional notes</label>
+          <label className="box_label" htmlFor="notes">
+            Additional notes
+          </label>
           <br />
           <textarea
             id="notes"
             name="notes"
             rows="4"
-            cols="50"
             placeholder="Anything else you would like to track? Note it here!"
             value={notes}
             onChange={handleChange}
@@ -401,8 +419,10 @@ function LogInputForm(props) {
         </section>
       </div>
       <section className="button-section">
-        <button type="submit">Submit</button>
-        <button type="reset" onClick={handleReset}>
+        <button className="form_btn" type="submit">
+          Submit
+        </button>
+        <button className="form_btn" type="reset" onClick={handleReset}>
           Reset
         </button>
       </section>

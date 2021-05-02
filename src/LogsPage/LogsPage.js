@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./LogsPage.css";
 import config from "../config";
 import TokenService from "../services/token-service";
 import LogItem from "../LogItem/LogItem";

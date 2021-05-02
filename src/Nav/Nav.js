@@ -9,13 +9,20 @@ function Nav(props) {
     return (
       <>
         <li className="navlink">
-          <Link to="/submit-log">Submit Log</Link>
+          <Link to="/submit-log" className="link_style">
+            Submit Log
+          </Link>
         </li>
         <li className="navlink">
-          <Link to="/logs">View Logs</Link>
+          <Link to="/logs" className="link_style">
+            View Logs
+          </Link>
         </li>
-        <li className="logout_btn">
-          <button onClick={props.handleLogout}>
+        <li className="logout_btn_container">
+          <button
+            className="logout_btn link_style"
+            onClick={props.handleLogout}
+          >
             Log Out {context.username}
           </button>
         </li>
@@ -27,10 +34,14 @@ function Nav(props) {
     return (
       <>
         <li className="navlink">
-          <Link to="signup">Create Account</Link>
+          <Link to="signup" className="link_style">
+            Create Account
+          </Link>
         </li>
         <li className="navlink">
-          <Link to="login">Log In</Link>
+          <Link to="login" className="link_style">
+            Log In
+          </Link>
         </li>
       </>
     );
@@ -40,7 +51,9 @@ function Nav(props) {
     <nav className="nav">
       <ul className="navbar">
         <li className="navlink">
-          <Link to="/">Home</Link>
+          <Link to="/" className="link_style">
+            Home
+          </Link>
         </li>
         {props.loggedIn ? LoggedIn() : LoggedOut()}
       </ul>

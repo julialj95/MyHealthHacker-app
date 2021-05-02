@@ -1,15 +1,31 @@
+.log_form_header {
+  font-size: 22px;
+}
 .new_log {
   text-align: center;
+  background-color: #6e3667;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 5px #88d317;
+  border-radius: 15px;
+  color: white;
 }
 .log_section {
   display: flex;
   flex-direction: row;
 }
-.mental,
-.sleep,
-.exercise,
-.other {
-  border: solid 1px black;
-  border-radius: 5px;
-  flex: 1;
+
+@media all and (min-width: 600px) {
+  .log_form_header {
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 768px) {
+}
+
+@media all and (min-width: 960px) {
+  .log_form_header {
+    font-size: 27px;
+  }
 }

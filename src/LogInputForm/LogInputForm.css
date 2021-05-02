@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Source+Sans+Pro&display=swap");
+
+.mental,
+.exercise,
+.sleep,
+.other {
+  border: solid 5px #88d317;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #6e3667;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  border-radius: 15px;
+  color: white;
+}
+
+.date_section {
+  padding: 0 10px 0 10px;
+}
+.input_box,
+textarea {
+  width: 60%;
+}
+.box_label {
+  font-size: 16px;
+  font-weight: normal;
+}
+.section_header {
+  font-size: 19px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.form_btn {
+  flex: 1;
+  margin: 5px 10px 5px 10px;
+  background-color: #3c3c3c;
+  box-shadow: 1px 1px white;
+  border: 2px solid #88d317;
+  border-radius: 3px;
+  color: white;
+  font-family: "Nunito";
+}
+@media all and (min-width: 600px) {
+  .input_box,
+  textarea {
+    width: 40%;
+  }
+  .box_label {
+    font-size: 19px;
+  }
+  .section_header {
+    font-size: 22px;
+  }
+  .form_btn {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .input_box,
+  textarea {
+    width: 30%;
+  }
+  .box_label {
+    font-size: 21px;
+  }
+  .section_header {
+    font-size: 24px;
+  }
+  .form_btn {
+    font-size: 18px;
+  }
+}

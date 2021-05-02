@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Login from "../Login";
-import Signup from "../Signup";
+import Login from "../Login/Login";
+import Signup from "../Signup/Signup";
 import SubmitLog from "../SubmitLog/SubmitLog";
 import HomePage from "../HomePage/HomePage";
 import Logs from "../LogsPage/LogsPage";
@@ -43,32 +43,35 @@ function App() {
           <Nav loggedIn={loggedIn} handleLogout={handleLogout} />
           <Header />
         </div>
-
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route
-            path="/login"
-            render={(props) => <Login {...props} handleLogin={setLoggedIn} />}
-          />
-          <Route path="/signup" component={Signup} />
-          <Route
-            path="/submit-log"
-            render={(props) => <SubmitLog {...props} logs={logs} />}
-          />
-          <Route
-            path="/logs"
-            render={(props) => (
-              <Logs
-                {...props}
-                logs={logs}
-                setLogs={setLogs}
-                removeLog={removeLog}
-              />
-            )}
-          />
-        </Switch>
+        <div className="body">
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route
+              path="/login"
+              render={(props) => <Login {...props} handleLogin={setLoggedIn} />}
+            />
+            <Route path="/signup" component={Signup} />
+            <Route
+              path="/submit-log"
+              render={(props) => <SubmitLog {...props} logs={logs} />}
+            />
+            <Route
+              path="/logs"
+              render={(props) => (
+                <Logs
+                  {...props}
+                  logs={logs}
+                  setLogs={setLogs}
+                  removeLog={removeLog}
+                />
+              )}
+            />
+          </Switch>
+        </div>
       </UserContext.Provider>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }
