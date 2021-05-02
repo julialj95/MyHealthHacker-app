@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Source+Sans+Pro&display=swap");
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #1a0135;
 }
 
+.body {
+  background-color: #bdbbb0;
+  margin-top: 0px;
+  padding: 15px 0 15px 0;
+  font-family: "Nunito";
+}
+
+.footer {
+  background-color: #1a0135;
+}
 .signup,
 .login {
   text-align: center;

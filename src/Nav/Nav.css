@@ -1,16 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Source+Sans+Pro&display=swap");
 .nav {
   flex-grow: 2;
 }
 .navbar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  text-align: left;
 }
 
 .navlink {
   list-style-type: none;
 }
+.link_style {
+  color: white;
+  text-decoration: none;
+  font-family: "Nunito";
+  font-size: 14px;
+}
+
+.logout_btn_container {
+  list-style-type: none;
+  text-align: left;
+}
 
 .logout_btn {
-  list-style-type: none;
+  background: none;
+  border: none;
+  padding: none;
+}
+
+@media all and (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media all and (min-width: 900px) {
 }
