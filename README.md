@@ -34,17 +34,17 @@ This fullstack application was built using:
 
 #### Home Page
 
-![Homepage](src/images/Screenshot (373).png)
+![Homepage](src/images/Screenshot(373).png)
 
 #### Login Page
 
-![Login](src/images/Screenshot (374).png)
+![Login](src/images/Screenshot(374).png)
 
 #### Log Submission Page
 
-![Recs](src/images/Screenshot (375).png)
+![Recs](src/images/Screenshot(375).png)
 
 #### Saved Logs Page
 
-![Saved Resources](src/images/Screenshot (376).png)
+![Saved Resources](src/images/Screenshot(376).png)
 
