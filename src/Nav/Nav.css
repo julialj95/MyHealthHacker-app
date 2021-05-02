@@ -27,7 +27,8 @@
 .logout_btn {
   background: none;
   border: none;
-  padding: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 @media all and (min-width: 600px) {
@@ -35,6 +36,12 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .link_style {
+    font-size: 16px;
+  }
 }
 @media all and (min-width: 900px) {
+  .link_style {
+    font-size: 19px;
+  }
 }

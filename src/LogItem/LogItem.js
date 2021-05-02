@@ -24,13 +24,25 @@ function LogItem(props) {
 
   const setStressColor = (param) => {
     if (param === 1) {
-      return "#55a630";
+      return "#80b918";
     }
     if (param >= 2 && param < 5) {
       return "yellow";
     }
     if (param === 5) {
       return "#c1121f";
+    }
+  };
+
+  const setMoodColor = (param) => {
+    if (param === 1) {
+      return "#c1121f";
+    }
+    if (param >= 2 && param < 4) {
+      return "yellow";
+    }
+    if (param >= 4) {
+      return "#80b918";
     }
   };
   const deleteLog = () => {
@@ -55,80 +67,92 @@ function LogItem(props) {
   const renderFullItem = () => {
     return (
       <section className="log_record long">
-        <h2 className="title_row">
+        <h2 className="title_row date_display">
           <FontAwesomeIcon icon={faCalendarAlt} />{" "}
           {moment(props.date).format("YYYY-MM-DD")}
         </h2>
         <div className="top_section">
           <div className="log_section">
-            <label htmlFor="stress">
+            <label htmlFor="stress" className="tracker margin">
               <FontAwesomeIcon
                 icon={faExclamationCircle}
                 style={{ color: setStressColor(props.stress) }}
               />{" "}
-              Stress Level: {props.stress}/5
+              Stress Level: {props.stress !== "" ? props.stress + "/5 " : null}
               <input
+                className="stress_style"
                 type="range"
                 name="stress"
                 id="stress"
-                min="0"
+                min="1"
                 max="5"
                 step="1"
                 disabled={true}
                 value={props.stress}
               />
             </label>
-            <label htmlFor="mood">
-              <FontAwesomeIcon icon={faSmile} /> Mood: {props.mood}/5
+            <label htmlFor="mood" className="tracker margin">
+              <FontAwesomeIcon
+                icon={faSmile}
+                style={{ color: setMoodColor(props.mood) }}
+              />{" "}
+              Mood: {props.mood !== "" ? props.mood + "/5 " : null}
               <input
+                className="mood_style"
                 type="range"
                 name="mood"
                 id="mood"
                 min="0"
                 max="5"
                 step="1"
+                disabled={true}
                 value={props.mood}
               />
             </label>
           </div>
           <div className="log_section">
-            <p>
-              <FontAwesomeIcon icon={faClock} /> Sleep Hours:{" "}
-              {props.sleep_hours}
+            <p className="tracker">
+              <FontAwesomeIcon icon={faClock} /> Sleep: {props.sleep_hours}{" "}
+              hours
             </p>
 
-            <label htmlFor="sleep_quality">
+            <label className="tracker margin" htmlFor="sleep_quality">
               <FontAwesomeIcon icon={faBed} /> Sleep Quality:{" "}
-              {/* {props.sleep_quality}/5 */}
+              {props.sleep_quality !== "" ? props.sleep_quality + "/5 " : null}
               <input
+                className="sleep_style"
                 type="range"
                 name="sleep_quality"
                 id="sleep_quality"
                 min="0"
                 max="5"
                 step="1"
+                disabled={true}
                 value={props.sleep_quality}
               />
             </label>
           </div>
           <div className="log_section">
-            <p>
-              <FontAwesomeIcon icon={faHourglassHalf} /> Exercise Minutes:{" "}
-              {props.exercise}
+            <p className="tracker">
+              <FontAwesomeIcon icon={faHourglassHalf} /> Exercise:{" "}
+              {props.exercise} minutes
             </p>
-            <p>
+            <p className="tracker">
               <FontAwesomeIcon icon={faWalking} /> Exercise Type:{" "}
               {props.exercise_type}
             </p>
-            <p>
+            <p className="tracker">
               <FontAwesomeIcon icon={faTint} /> Water Intake: {props.water} oz.
             </p>
           </div>
         </div>
-        <p>
-          {" "}
-          <FontAwesomeIcon icon={faClipboard} /> Additional Notes: {props.notes}
-        </p>
+        <div className="log_section">
+          <p className="tracker">
+            {" "}
+            <FontAwesomeIcon icon={faClipboard} /> Additional Notes:{" "}
+            {props.notes}
+          </p>
+        </div>
         <div className="button_section">
           <button
             className="logItem_btn"
@@ -149,11 +173,13 @@ function LogItem(props) {
   const renderPartialItem = () => {
     return (
       <section className="log_record short">
-        <h2>
+        <h2 className="date_display">
           <FontAwesomeIcon icon={faCalendarAlt} />{" "}
           {moment(props.date).format("YYYY-MM-DD")}
         </h2>
-        <button onClick={() => setDisplayFull(true)}>View Log</button>
+        <button onClick={() => setDisplayFull(true)} className="view_btn">
+          View Log
+        </button>
       </section>
     );
   };
@@ -162,13 +188,13 @@ function LogItem(props) {
     <div>
       {displayFull ? renderFullItem() : renderPartialItem()}
       {displayEditLogForm ? (
-        <>
-          <h2>Edit Log</h2>
+        <div className="edit_log_form">
+          <h2 className="log_form_header">Edit Log</h2>
           <EditLog
             id={props.id}
             setDisplayEditLogForm={setDisplayEditLogForm}
           />
-        </>
+        </div>
       ) : null}
       {error ? <h2>{error.message}</h2> : null}
     </div>

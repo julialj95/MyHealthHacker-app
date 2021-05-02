@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Source+Sans+Pro&display=swap");
 
+body {
+  margin: 0;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -24,4 +27,5 @@
 
 .wrapper {
   height: 100%;
+  margin: 0;
 }

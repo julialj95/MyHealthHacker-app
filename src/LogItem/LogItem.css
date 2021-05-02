@@ -1,8 +1,7 @@
 .log_record {
   display: flex;
-  /* flex-direction: column; */
   border: solid 1px black;
-  padding: 5px;
+  padding: 5px 0 5px 0;
   margin: 5px;
   background-color: #6e3667;
   border: solid 5px #88d317;
@@ -32,7 +31,8 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  border: solid 1px black;
+  border: solid 3px #88d317;
+  border-radius: 5px;
 }
 
 .button_section {
@@ -49,14 +49,113 @@
   border-radius: 3px;
   color: white;
   font-family: "Nunito";
+  cursor: pointer;
 }
 
+.date_display {
+  font-size: 18px;
+  margin-left: 5px;
+}
+.view_btn {
+  margin: 5px 10px 5px 10px;
+  background-color: #3c3c3c;
+  box-shadow: 1px 1px white;
+  border: 2px solid #88d317;
+  border-radius: 3px;
+  color: white;
+  font-family: "Nunito";
+  font-size: 14px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tracker {
+  font-size: 16px;
+  flex-grow: 1;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.margin {
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  /* width: 100%; */
+}
+
+.sleep_style::-webkit-slider-runnable-track,
+.mood_style::-webkit-slider-runnable-track {
+  width: 70%;
+  height: 5px;
+  background: linear-gradient(45deg, red, yellow, green);
+  border: none;
+  border-radius: 3px;
+}
+
+.stress_style::-webkit-slider-runnable-track {
+  width: 70%;
+  height: 5px;
+  background: linear-gradient(45deg, green, yellow, red);
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #88d317;
+  margin-top: -4px;
+}
+
+.edit_log_form {
+  text-align: center;
+  background-color: #1a0135;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  border: solid 5px red;
+  border-radius: 15px;
+  color: white;
+}
 @media all and (min-width: 600px) {
   .button_section {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .date_display {
+    font-size: 21px;
+  }
+  .view_btn {
+    font-size: 18px;
+  }
+  .logItem_btn {
+    font-size: 18px;
+  }
+  .tracker {
+    font-size: 19px;
+  }
+}
+@media all and (min-width: 760px) {
   .top_section {
     flex-direction: row;
+  }
+}
+@media all and (min-width: 960px) {
+  .date_display {
+    font-size: 26px;
+  }
+  .view_btn {
+    font-size: 20px;
+  }
+  .logItem_btn {
+    font-size: 20px;
+  }
+  .tracker {
+    font-size: 23px;
   }
 }
