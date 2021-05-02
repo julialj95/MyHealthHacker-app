@@ -4,7 +4,7 @@ import LogInputForm from "../LogInputForm/LogInputForm";
 import config from "../config";
 import TokenService from "../services/token-service";
 import moment from "moment";
-import "./EditLog.css";
+
 function EditLog(props) {
   const history = useHistory();
   const [formData, setFormData] = useState({
