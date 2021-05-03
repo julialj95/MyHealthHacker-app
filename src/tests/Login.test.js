@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Login from "../Login";
+import Login from "../Login/Login";
 import { MemoryRouter as Router } from "react-router-dom";
 import renderer from "react-test-renderer";
 

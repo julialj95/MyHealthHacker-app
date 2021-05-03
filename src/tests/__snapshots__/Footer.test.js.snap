@@ -4,11 +4,15 @@ exports[`renders the UI as expected 1`] = `
 <footer
   className="footer"
 >
-  <p>
+  <p
+    className="footer_content"
+  >
     MyHealthHacker
   </p>
-  <p>
-    © 2020
+  <p
+    className="footer_content"
+  >
+    © 2021
   </p>
 </footer>
 `;

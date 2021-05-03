@@ -4,40 +4,93 @@ exports[`renders the UI as expected 1`] = `
 <main
   className="about"
 >
-  <h1>
+  <h1
+    className="home_header"
+  >
     MyHealthHacker
   </h1>
-  <section>
-    <h2>
+  <section
+    className="home_container"
+  >
+    <h2
+      className="home_title"
+    >
       Why Track Your Health Habits?
     </h2>
-    <p>
-      Studies show that becoming aware of habits is the first step towards changing them. MyHealthHacker will help you to become aware of your health habits and track how different behaviors make you feel mentally and physically!
-       
-    </p>
-    <p>
-      Each day, you can track your sleep patterns, your physical activity, and mental health. Over time, you will begin to notice patterns and correlations between what you did and how you felt. This will allow you to adjust your habits to help you feel your best!
-    </p>
-    <h2>
+    <div
+      className="background_wrapper"
+    >
+      <div
+        className="img_text_block"
+      >
+        <p
+          className="home_p"
+        >
+          The first step towards improving your habits is to become aware of them. MyHealthHacker will help you to increase your awareness of your health habits and track how different behaviors make you feel mentally and physically!
+           
+        </p>
+        <img
+          alt="wellness"
+          className="home_img"
+          src="wellness_graphic.png"
+        />
+      </div>
+    </div>
+    <h2
+      className="home_title"
+    >
+      What You Will Notice
+    </h2>
+    <div
+      className="background_wrapper"
+    >
+      <div
+        className="img_text_block"
+      >
+        <p
+          className="home_p"
+        >
+          Each day, you can track your sleep patterns, your physical activity, and mental health. Over time, you will begin to notice patterns and correlations between what you did and how you felt. This will allow you to adjust your habits to help you feel your best!
+        </p>
+        <img
+          alt="graph"
+          className="home_img"
+          src="bar_graph.png"
+        />
+      </div>
+    </div>
+    <h2
+      className="home_title"
+    >
       How To Use MyHealthHacker
     </h2>
-    <p>
-      <a
-        href="/signup"
-        onClick={[Function]}
+    <div
+      className="background_wrapper"
+    >
+      <p
+        className="home_p"
       >
-        Create an account
-      </a>
-       or
-       
-      <a
-        href="/login"
-        onClick={[Function]}
-      >
-        login
-      </a>
-       with a demo account to submit your first log. You can log in to check, submit and edit your logs any time!
-    </p>
+        <a
+          className="link"
+          href="/signup"
+          onClick={[Function]}
+        >
+          Create an account
+        </a>
+         
+        or
+         
+        <a
+          className="link"
+          href="/login"
+          onClick={[Function]}
+        >
+          login
+        </a>
+         
+        with a demo account to submit your first log. You can log in to check, submit and edit your logs any time!
+      </p>
+    </div>
   </section>
 </main>
 `;

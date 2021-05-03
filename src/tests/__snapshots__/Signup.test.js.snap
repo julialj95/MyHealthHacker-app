@@ -5,14 +5,16 @@ exports[`renders the UI as expected 1`] = `
   className="signup"
 >
    
-  <h1>
-    SIGN UP
-  </h1>
   <h2
+    className="signup_header"
+  >
+    SIGN UP
+  </h2>
+  <h3
     className="signup_instructions"
   >
     Create an account to start tracking your health habits!
-  </h2>
+  </h3>
   <form
     className="signup_form"
     onSubmit={[Function]}
@@ -33,8 +35,9 @@ exports[`renders the UI as expected 1`] = `
       type="text"
     />
     <br />
+    <br />
     <button
-      className="signup_btn"
+      className="form_btn"
       type="submit"
     >
       Create Account
